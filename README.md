@@ -40,7 +40,7 @@ The baud rate could be 1 bits / second to 115200 bits / second
 Task Syncronization is taken very seriously here. Hence the variable baud does not effect the firmware.
 
 Baud calculation is event based, the timer waits for the entire buffer to be received, but once entire packet is received the uart interput would stop the timmer.  
-Giving us an accurate timming calculation 
+Giving us an accurate timing calculation 
 
 
 ### Pin Mapping 
