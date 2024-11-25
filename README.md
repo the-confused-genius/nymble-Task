@@ -32,6 +32,15 @@ Since PC side baud calculation does not take 'size' transfer into account.
 
 If the MCU receives 'size' as 0, it stops receiving the packets and prepares end transmission, which is reading from eeprom (packet wise) and sending it back to PC
 
+### Merts 
+
+The code is highly scalable, the input string could be as large the entire storge of the external eeprom 
+The baud rate could be 1 bits / second to 115200 bits / second
+
+Task Syncronization is taken very seriously here. Hence the variable baud does not effect the firmware.
+
+Baud calculation is event based, the timer waits for the entire buffer to be received, but once entire packet is received the uart interput would stop the timmer.  
+Giving us an accurate timming calculation 
 
 
 ### Pin Mapping 
